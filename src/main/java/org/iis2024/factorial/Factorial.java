@@ -4,6 +4,9 @@ public class Factorial {
 
   public long compute(long value) {
     long result ;
+    if (value < 0) {
+      throw new RuntimeException("The value " + value + " is negative");
+    }
     if (value == 0) {
       result = 1 ;
     } else {

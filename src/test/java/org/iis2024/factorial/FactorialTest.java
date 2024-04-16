@@ -13,6 +13,7 @@ import org.junit.jupiter.api.Test;
  3 - 6
  4 - 24
  7 - 5040
+ -1 - raise an exception
  */
 class FactorialTest {
 
@@ -72,12 +73,16 @@ class FactorialTest {
 
   @Test
   void shouldFactorialOf7Returns5040() {
-
     // Act
     long obtainedValue = factorial.compute(7);
     long expectedValue = 5040;
 
     // Assert
     assertEquals(expectedValue, obtainedValue);
+  }
+
+  @Test
+  void shouldFactorialOfANegativeNumberThrowAnException() {
+    assertThrows(RuntimeException.class, () -> factorial.compute(-4));
   }
 }
