@@ -14,4 +14,12 @@ public class Factorial {
     }
     return result ;
   }
+
+  public static void main(String[] args) {
+    Factorial factorial = new Factorial();
+    long result = factorial.compute(20) ;
+    System.out.println("The factorial of 20 is " + result);
+  }
+
+  public void f() {}
 }
